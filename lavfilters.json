@@ -6,31 +6,13 @@
     "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.73.1/LAVFilters-0.73.1-x64.zip",
     "hash": "4C9AFCB8EF64AE6B6FBFDA056CBAF895F1F059ED06A964E39A01C3FAC437E80D",
     "depends": "sudo",
-    "pre_install": [
-        "(Get-Content $dir\\install_audio.bat) | Foreach-Object {$_ -replace \"@pause >nul\",\"\"} | Out-File -Encoding oem $dir\\install_audio.bat",
-        "(Get-Content $dir\\install_video.bat) | Foreach-Object {$_ -replace \"@pause >nul\",\"\"} | Out-File -Encoding oem $dir\\install_video.bat",
-        "(Get-Content $dir\\install_splitter.bat) | Foreach-Object {$_ -replace \"@pause >nul\",\"\"} | Out-File -Encoding oem $dir\\install_splitter.bat",
-        "(Get-Content $dir\\uninstall_audio.bat) | Foreach-Object {$_ -replace \"@pause >nul\",\"\"} | Out-File -Encoding oem $dir\\uninstall_audio.bat",
-        "(Get-Content $dir\\uninstall_video.bat) | Foreach-Object {$_ -replace \"@pause >nul\",\"\"} | Out-File -Encoding oem $dir\\uninstall_video.bat",
-        "(Get-Content $dir\\uninstall_splitter.bat) | Foreach-Object {$_ -replace \"@pause >nul\",\"\"} | Out-File -Encoding oem $dir\\uninstall_splitter.bat"
-    ],
     "installer": {
-        "script": [
-            "sudo \"$dir\\install_audio.bat\"",
-            "sudo \"$dir\\install_video.bat\"",
-            "sudo \"$dir\\install_splitter.bat\""
-        ]
+        "script": "sudo powershell -Command \"$dir\\install_audio.bat\";\"$dir\\install_video.bat\";\"$dir\\install_splitter.bat\""
     },
     "uninstaller": {
-        "script": [
-            "sudo \"$dir\\uninstall_audio.bat\"",
-            "sudo \"$dir\\uninstall_video.bat\"",
-            "sudo \"$dir\\uninstall_splitter.bat\""
-        ]
+        "script": "sudo powershell -Command \"$dir\\uninstall_audio.bat\";\"$dir\\uninstall_video.bat\";\"$dir\\uninstall_splitter.bat\""
     },
-    "checkver": {
-        "github": "https://github.com/Nevcairiel/LAVFilters"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x64.zip"
     }
