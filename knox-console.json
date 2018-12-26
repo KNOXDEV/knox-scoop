@@ -16,6 +16,7 @@
         "script": [
         	"concfg tokencolor enable",
         	"concfg import \"$dir\\console-mustang.json\" -n",
+            "concfg clean",
         	"cp \"$dir\\console-prompt.json\" \"$($env:SCOOP, \"$env:USERPROFILE\\scoop\" | Select-Object -first 1)\\apps\\pshazz\\current\\themes\"",
         	"pshazz use console-prompt"
         ]
