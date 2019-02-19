@@ -6,6 +6,10 @@
     "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.73.1/LAVFilters-0.73.1-x64.zip",
     "hash": "4C9AFCB8EF64AE6B6FBFDA056CBAF895F1F059ED06A964E39A01C3FAC437E80D",
     "depends": "sudo",
+    "pre_install": [
+        "ForEach($file in Get-ChildItem $dir\\ -Filter install_*.bat) {(Get-Content $file) | ForEach-Object {$_ -replace \"regsvr32.exe LAV\",\"regsvr32.exe /s LAV\"} | Out-File -Encoding oem $file}",
+        "ForEach($file in Get-ChildItem $dir\\ -Filter uninstall_*.bat) {(Get-Content $file) | ForEach-Object {$_ -replace \"regsvr32.exe /u LAV\",\"regsvr32.exe /u /s LAV\"} | Out-File -Encoding oem $file}"
+    ],
     "installer": {
         "script": "sudo powershell -Command \"$dir\\install_audio.bat;$dir\\install_video.bat;$dir\\install_splitter.bat\""
     },
