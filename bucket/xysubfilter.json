@@ -6,6 +6,10 @@
     "url": "https://github.com/Cyberbeing/xy-VSFilter/releases/download/3.1.0.752/XySubFilter_3.1.0.752_x64.zip",
     "hash": "13CAE8C9E5CE367E74771A803BE6AA821F922E7897E14CFF9A1F2529FC185F66",
     "depends": "sudo",
+    "pre_install": [
+        "ForEach($file in Get-ChildItem $dir\\ -Filter Install_*.bat) {(Get-Content $dir\\$file) | ForEach-Object {$_ -replace \"regsvr32.exe Xy\",\"regsvr32.exe /s Xy\"} | Out-File -Encoding oem $dir\\$file}",
+        "ForEach($file in Get-ChildItem $dir\\ -Filter Uninstall_*.bat) {(Get-Content $dir\\$file) | ForEach-Object {$_ -replace \"regsvr32.exe /u Xy\",\"regsvr32.exe /u /s Xy\"} | Out-File -Encoding oem $dir\\$file}"
+    ],
     "installer": {
         "script": "sudo \"$dir\\Install_XySubFilter.bat\""
     },
