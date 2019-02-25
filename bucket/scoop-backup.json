@@ -2,10 +2,10 @@
     "homepage": "https://git.irs.sh/KNOXDEV",
     "description": "KNOX's prefered custom Powershell style and prompt",
     "license": "Unlicense",
-    "version": "1.0",
+    "version": "1.1",
     "url": "https://git.irs.sh/KNOXDEV/scoop-backup/archive/fde65138d09d39ba4a6b3bbb69033d81a04eabd8.zip",
     "hash": "AF0707C45F2F8D05D88EDC28ABF2B3D71366434E137D1BBA99D7A85281505934",
-    "extract_dir": "scoop-backup-d9628d71460f3a3ae83dfbaf20a60f17fa40c45a",
+    "extract_dir": "scoop-backup-fde65138d09d39ba4a6b3bbb69033d81a04eabd8",
     "bin": "scoop-backup.ps1",
     "persist": "backups",
     "checkver": {
