@@ -11,10 +11,18 @@
         "ForEach($file in Get-ChildItem $dir\\ -Filter uninstall_*.bat) {(Get-Content $dir\\$file) | ForEach-Object {$_ -replace \"regsvr32.exe /u LAV\",\"regsvr32.exe /u /s LAV\"} | Out-File -Encoding oem $dir\\$file}"
     ],
     "installer": {
-        "script": "sudo powershell -Command \"$dir\\install_audio.bat;$dir\\install_video.bat;$dir\\install_splitter.bat\""
+        "script": [
+            "sudo $dir\\install_audio.bat",
+            "sudo $dir\\install_video.bat",
+            "sudo $dir\\install_splitter.bat"
+        ]
     },
     "uninstaller": {
-        "script": "sudo powershell -Command \"$dir\\uninstall_audio.bat;$dir\\uninstall_video.bat;$dir\\uninstall_splitter.bat\""
+        "script": [
+            "sudo $dir\\uninstall_audio.bat",
+            "sudo $dir\\uninstall_video.bat",
+            "sudo $dir\\uninstall_splitter.bat"
+        ]
     },
     "checkver": "github",
     "autoupdate": {
