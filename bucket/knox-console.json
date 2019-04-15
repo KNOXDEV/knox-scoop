@@ -8,7 +8,7 @@
     "bin": "knxcon.ps1",
     "depends": ["pshazz", "concfg"],
     "installer": {
-        "file": "$dir/knxcon.ps1",
+        "file": "knxcon.ps1",
         "args": "install",
         "keep": "true"
     },
