@@ -4,7 +4,7 @@
     "license": "Unlicense",
     "version": "0.2019.02.24",
     "url": "https://git.irs.sh/KNOXDEV/scoop-backup/archive/fde65138d09d39ba4a6b3bbb69033d81a04eabd8.zip",
-    "hash": "af0707c45f2f8d05d88edc28abf2b3d71366434e137d1bba99d7a85281505934",
+    "hash": "1cc370ef39af0faa52e1017834c0d633935d4b971ceac9526df497e678d7d032",
     "extract_dir": "scoop-backup",
     "bin": "scoop-backup.ps1",
     "persist": "backups",
