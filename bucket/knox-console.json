@@ -2,9 +2,9 @@
     "homepage": "https://git.irs.sh/KNOXDEV",
     "description": "KNOX's prefered custom Powershell style and prompt",
     "license": "Unlicense",
-    "version": "0.2019.04.15",
-    "url": "https://git.irs.sh/KNOXDEV/knox-console/archive/644d066babe2a93ca2d7b1a34a53cf866821632f.zip",
-    "hash": "b70cfb4b9640bdd6aefb02df73f3a9ff5aea42fdf74f7aa4e8de682f99ef222f",
+    "version": "0.2020.06.04",
+    "url": "https://git.irs.sh/KNOXDEV/knox-console/archive/eb0659ffbb4a087e0e923e1097f727cc58e19192.zip",
+    "hash": "492904729fd00ad95243f32912f27c9332be68d3b9d3a56b4d5ac548e3ab8e80",
     "extract_dir": "knox-console",
     "bin": "knxcon.ps1",
     "depends": [
