@@ -9,7 +9,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 Then install this software bucket like this:
 ```powershell
-scoop bucket add knox-scoop https://git.irs.sh/KNOXDEV/knox-scoop
+scoop bucket add knox-scoop https://github.com/KNOXDEV/knox-scoop/
 ```
 
 Now you can quickly and automatically install the software registered here.
