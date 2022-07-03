@@ -1,9 +1,9 @@
 {
-    "homepage": "https://git.irs.sh/KNOXDEV",
+    "homepage": "https://github.com/KNOXDEV",
     "description": "KNOX's prefered custom Powershell style and prompt",
     "license": "Unlicense",
     "version": "0.2020.06.04",
-    "url": "https://git.irs.sh/KNOXDEV/knox-console/archive/eb0659ffbb4a087e0e923e1097f727cc58e19192.zip",
+    "url": "https://github.com/KNOXDEV/knox-console/archive/eb0659ffbb4a087e0e923e1097f727cc58e19192.zip",
     "hash": "492904729fd00ad95243f32912f27c9332be68d3b9d3a56b4d5ac548e3ab8e80",
     "extract_dir": "knox-console",
     "bin": "knxcon.ps1",
@@ -17,11 +17,11 @@
         "keep": "true"
     },
     "checkver": {
-        "url": "https://git.irs.sh/KNOXDEV/knox-console/graph",
-        "re": "(?<sha>[0-9a-f]{40})(.|\\s)*?(\\d{4})-(\\d{2})-(\\d{2})",
-        "replace": "0.${2}.${3}.${4}"
+        "url": "https://github.com/KNOXDEV/knox-console/commits/master.atom",
+        "re": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>[0-9a-f]{40})",
+        "replace": "0.${1}.${2}.${3}"
     },
     "autoupdate": {
-        "url": "https://git.irs.sh/KNOXDEV/knox-console/archive/$matchSha.zip"
+        "url": "https://github.com/KNOXDEV/knox-console/archive/$matchSha.zip"
     }
 }
